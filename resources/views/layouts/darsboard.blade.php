@@ -130,12 +130,15 @@
 
 <body>
 
-    <div id="app">
+    <div id="app" style="margin-top: -24px;">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a class="navbar-brand bold" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <img src="{{ asset('image/icon.png') }}" height="90px" alt="Description de l'image">
+
+<!--                     {{ config('app.name', 'Laravel') }}
+ -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -161,7 +164,7 @@
                         @endif
                         @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle bold" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle bold" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; font-weight:bold" >
                                 {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
